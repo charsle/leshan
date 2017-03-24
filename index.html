@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>学校自服务门户登录</title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <!--logo-->
+            <div class="logo">
+                <h1><a href="index.html">学校门户统一入口logo</a></h1>
+            </div>
+            <!--//logo-->
+            <div class="top-nav">
+                <ul class="right-icons">
+                    <li><span><i class="glyphicon glyphicon-phone"> </i>移动云主站</span></li>
+                    <li><a href="javascript:;"><i class="glyphicon glyphicon-user"> </i>开放云市场</a></li>
+
+                </ul>
+
+                <div class="clearfix"> </div>
+                <!---pop-up-box-->
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+    </div>
+    <!--//-->
+    <div class="header-right">
+        <div class=" banner">
+            <div class="slider">
+                <div class="callbacks_container">
+                    <ul class="rslides" id="slider">
+                        <li>
+                            <div class="banner1">
+                                <div class="caption">
+                                    <h3><span>多系统统一整合</span></h3>
+                                    <p>一处登录，多处链接</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="banner2">
+                                <div class="caption">
+                                    <h3><span>全网信息平台</span></h3>
+                                    <p>一处登录，多处链接</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="banner3">
+                                <div class="caption">
+                                    <h3><span>多整合，多处应用</span></h3>
+                                    <p>一处登录，多处链接</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="caption-login">
+                        <!--<h3><span>vivam</span>us site</h3>
+                        <p>Nunc dignissim risus idi</p>-->
+
+                        <div class="form-signin">
+                            <div id="jsLoginTab" class="LoginTab">
+                                <div class="nav-menu">
+                                    <a data-type="AccountLogin" href="javascript:void(0);" onfocus="this.blur();" class="active">账号登录</a>
+                                    <a data-type="DynamicLogin" href="javascript:void(0);" onfocus="this.blur();" class="">动态密码登录</a>
+                                </div>
+                                <div class="nav-current" style="left: 5px; overflow: hidden; width: 150px;"></div>
+                            </div>
+                            <div id="jsLoginContent" class="tab-content">
+                                <div id="jsAccountLoginDiv" style="display: block;">
+                                    <form action="" id="AccountLoginFrom" method="post" role="form">
+                                        <div class="form-group">
+                                            <input autocomplete="off" class="form-control" data-val="true" data-val-required="账号不能为空" id="Account" maxlength="50" name="Account" placeholder="请输入账号/手机号码/邮箱" type="text" value="">
+                                        </div>
+                                        <div class="form-group">
+                                            <input autocomplete="off" class="form-control" data-val="true" data-val-required="密码不能为空" id="Password" maxlength="30" name="Password" placeholder="请输入密码" type="password">
+                                        </div>
+                                </div>
+                                <div id="jsMobileLoginDiv" style="display: none;">
+                                    <form returnurl="" action="" id="DynamicLoginFrom" method="post" role="form">
+                                        <div class="form-group">
+                                            <input autocomplete="off" class="form-control" data-val="true" data-val-regex="手机格式错误" data-val-regex-pattern="^1[0-9]{10}$" data-val-required="手机不能为空" id="Mobile" maxlength="11" name="Mobile" placeholder="请输入手机号码" type="text" value="">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <input autocomplete="off" class="form-control" data-val="true" data-val-regex="动态密码必须是6位数字" data-val-regex-pattern="^(.|\n){6,6}$" data-val-required="动态密码不能为空" id="DynamicPassword" maxlength="6" name="DynamicPassword" placeholder="动态验证码" type="text" value="">
+                                                <div class="input-group-btn">
+                                                    <button class="btn btn-default" id="jsGetDynamic">获取验证码</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="form-group">
+                                    <input type="hidden" name="LoginType" value="DynamicLogin">
+                                    <button id="btnDynamicPasswordLogin" class="btn btn-lg btn-block" type="submit">登录</button>
+                                </div>
+                                <div class="clearfix show-login-a">
+                                    <a id="ForgetPassword" href="javascript:;">忘记密码?</a>
+                                    <a href="javascript:;" class="pull-right">没有账号？立即注册</a>
+                                </div>
+                                <div class="validation-summary-valid" data-valmsg-summary="true">
+                                    <ul>
+                                        <li style="display:none"></li>
+                                    </ul>
+                                </div>
+                                <div id="jsErrorDynamic" class="has-error"></div>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--header-bottom-->
+    <div class="banner-bottom-top">
+        <div class="container">
+            <div class="bottom-header">
+                <div class="header-bottom">
+                    <div class=" bottom-head">
+                        <a href="javascript:;">
+                            <div class="buy-media">
+                                <i class="buy"> </i>
+                                <h6>Buy</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class=" bottom-head">
+                        <a href="javascript:;">
+                            <div class="buy-media">
+                                <i class="rent"> </i>
+                                <h6>Rent</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class=" bottom-head">
+                        <a href="javascript:;">
+                            <div class="buy-media">
+                                <i class="pg"> </i>
+                                <h6>Hostels</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class=" bottom-head">
+                        <a href="javascript:;">
+                            <div class="buy-media">
+                                <i class="sell"> </i>
+                                <h6>Resale</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class=" bottom-head">
+                        <a href="javascript:;">
+                            <div class="buy-media">
+                                <i class="loan"> </i>
+                                <h6>Home Loans</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class=" bottom-head">
+                        <a href="javascript:;">
+                            <div class="buy-media">
+                                <i class="apart"> </i>
+                                <h6>Projects</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class=" bottom-head">
+                        <a href="javascript:;">
+                            <div class="buy-media">
+                                <i class="deal"> </i>
+                                <h6>Dealers</h6>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+
+        <div class="services">
+            <div class="container">
+                <div class="service-top">
+                    <h3>市场需求服务</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+                <div class="services-grid">
+                    <div class="col-md-6 service-top1">
+                        <div class=" ser-grid">
+                            <a href="#" class="hi-icon hi-icon-archive glyphicon glyphicon-user"> </a>
+                        </div>
+                        <div class="ser-top">
+                            <h4>用户需求</h4>
+                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.Contrary to popular belief, Lorem Ipsum </p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="col-md-6 service-top1">
+                        <div class=" ser-grid">
+                            <a href="#" class="hi-icon hi-icon-archive glyphicon glyphicon-leaf"> </a>
+                        </div>
+                        <div class="ser-top">
+                            <h4>刚性需求</h4>
+                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.Contrary to popular belief, Lorem Ipsum </p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="services-grid">
+                    <div class="col-md-6 service-top1">
+                        <div class=" ser-grid">
+                            <a href="#" class="hi-icon hi-icon-archive glyphicon glyphicon-cog"> </a>
+                        </div>
+                        <div class="ser-top">
+                            <h4>全网配置</h4>
+                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.Contrary to popular belief, Lorem Ipsum </p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="col-md-6 service-top1">
+                        <div class=" ser-grid">
+                            <a href="#" class="hi-icon hi-icon-archive glyphicon glyphicon-file"> </a>
+                        </div>
+                        <div class="ser-top">
+                            <h4>市场分析</h4>
+                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical .Contrary to popular belief, Lorem Ipsum</p>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--footer-->
+    <div class="footer">
+        <div class="container">
+            <div class="footer-top-at">
+                <div class="col-md-3 amet-sed">
+                    <h4>新手指南</h4>
+                    <ul class="nav-bottom">
+                        <li><a href="about.html">注册/登录</a></li>
+                        <li><a href="blog.html">常见问题</a></li>
+                        <li><a href="javascript:;">了解产品</a></li>
+
+                    </ul>
+                </div>
+                <div class="col-md-3 amet-sed ">
+                    <h4>用户相关</h4>
+                    <ul class="nav-bottom">
+                        <!--<li><a href="single.html">Real Estate Brokers</a></li>
+                        <li><a href="single.html">Business Development</a></li>-->
+
+                    </ul>
+                </div>
+                <div class="col-md-3 amet-sed">
+                    <h4>服务热线</h4>
+
+                    <ul class="nav-bottom">
+                        <!--<li><a href="#">Live Chat</a></li>-->
+
+                    </ul>
+                </div>
+                <div class="col-md-3 amet-sed ">
+                    <h4>关于我们</h4>
+                    <ul class="nav-bottom">
+                        <!--<li><a href="single.html">Residential Property</a></li>
+                        <li><a href="single.html">Commercial Property</a></li>-->
+
+                    </ul>
+
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="col-md-4 footer-logo">
+                    <h4><a href="index.html">学校门户统一入口logo</a></h4>
+                </div>
+                <div class="col-md-8 footer-class">
+                    <p>Copyright &copy; 2015.Company name All rights reserved.</p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+    <!--//footer-->
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/responsiveslides.min.js"></script>
+<script>
+    $(function() {
+        $("#slider").responsiveSlides({
+            auto: true,
+            speed: 500,
+            namespace: "callbacks",
+            pager: true,
+        });
+    });
+</script>
+<script type="text/javascript" src="js/scripts.js">
+</script>
+
+
+</html>
