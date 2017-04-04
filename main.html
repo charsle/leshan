@@ -1,114 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>主页面</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="js/layui/css/layui.css" media="all">
+
     <style>
-        .main-header{
+        .main-header {
             padding-left: 20px;
             padding-right: 20px;
         }
-        .layout-main{
+
+        .layout-main {
             margin-top: 20px;
             display: flex;
 
             flex-wrap: wrap;
         }
-        .layout-setting{
+
+        .layout-setting {
             width: 32%;
             margin-left: 15px;
         }
+
+        .layui-tab-title {
+            background-color: #3399e5;
+            height: 41px;
+        }
+
+        .layui-tab-title li {
+            color: #fff;
+        }
+
+        .layui-tab-title .layui-this {
+           color: #fff;
+            background-color: #058de0;
+           
+        }
+.layui-tab-title .layui-this:after{
+ border: 0px;
+}
+        .layui-tab {
+            margin: 0;
+        }
+
+        .layout-logo {
+            float: left;
+            width: 10%;
+            height: 40px;
+            color: #fff;
+            background-color: #3399e5;
+            line-height: 39px;
+            text-align: center;
+        }
     </style>
 </head>
+
 <body>
-<div class="container-fluid">
-<div class="header main-header">
+    <div class="container-fluid">
 
-        <!--logo-->
-        <div class="logo">
-            <h1><a href="index.html">学校门户统一入口logo</a></h1>
-        </div>
-        <!--//logo-->
-        <div class="top-nav">
-            <ul class="right-icons">
-                <li><span><i class="glyphicon glyphicon-phone"> </i>移动云主站</span></li>
-                <li><a href="javascript:;"><i class="glyphicon glyphicon-user"> </i>开放云市场</a></li>
-
+        <div class="layui-tab" lay-filter="layout" lay-allowclose="true">
+            <div class="layout-logo" >
+                logo
+            </div>
+            <ul class="layui-tab-title" style="float: left;width: 80%;">
+                <li class="layui-this" lay-id="11">网站设置</li>
+                
             </ul>
-
-            <div class="clearfix"> </div>
-            <!---pop-up-box-->
-        </div>
-        <div class="clearfix"> </div>
-
-</div>
-</div>
-    <div class="container-fluid layout-main">
-        <div class="layout-setting">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <div class="panel-title">菜单名称</div>
-                </div>
-                <div class="panel-body">
-                    内容
-                </div>
+            <div class="layout-logo" style="float: right;">
+                个人主页
             </div>
-
-        </div>
-
-        <div class="layout-setting">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <div class="panel-title">菜单名称</div>
+            <div class="clearfix"></div>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    ddd
                 </div>
-                <div class="panel-body">
-                    内容
-                </div>
+            
             </div>
-
-        </div>
-
-        <div class="layout-setting">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <div class="panel-title">菜单名称</div>
-                </div>
-                <div class="panel-body">
-                    内容
-                </div>
-            </div>
-
-        </div>
-
-        <div class="layout-setting">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <div class="panel-title">菜单名称</div>
-                </div>
-                <div class="panel-body">
-                    内容
-                </div>
-            </div>
-
-        </div>
-
-        <div class="layout-setting">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <div class="panel-title">菜单名称</div>
-                </div>
-                <div class="panel-body">
-                    内容
-                </div>
-            </div>
-
         </div>
 
     </div>
-
-
-
+    <!--<button class="layui-btn site-demo-active" data-type="tabAdd">新增Tab项</button>
+  <button class="layui-btn site-demo-active" data-type="tabDelete">删除：商品管理</button>-->
+    </div>
 </body>
+<script src="js/jquery.min.js"></script>
+<script src="js/layui/layui.js" charset="utf-8"></script>
+<script>
+    layui.use('element', function () {
+        var $ = layui.jquery,
+            element = layui.element(); //Tab的切换功能，切换事件监听等，需要依赖element模块
+            $('.layui-tab-title li:first-child').find('i').remove();
+        var active = {
+            tabAdd: function () {
+                //新增一个Tab项
+                element.tabAdd('layout', {
+                    title: '新选项' + (Math.random() * 1000 | 0), //用于演示
+                    content: '内容' + (Math.random() * 1000 | 0),
+                    id: new Date().getTime() //实际使用一般是规定好的id，这里以时间戳模拟下
+                })
+            },
+            tabDelete: function (othis) {
+                //删除指定Tab项
+                var layid = location.hash.replace(/^#layout=/, '');
+                element.tabDelete('layout', layid); //删除：“商品管理”
+
+            },
+
+        };
+        $('.site-demo-active').on('click', function () {
+            var othis = $(this),
+                type = othis.data('type');
+            active[type] ? active[type].call(this, othis) : '';
+        });
+        //Hash地址的定位
+        var layid = location.hash.replace(/^#layout=/, '');
+        element.tabChange('layout', layid);
+        element.on('tab(layout)', function (elem) {
+            location.hash = 'layout=' + $(this).attr('lay-id');
+        });
+    });
+</script>
+
 </html>
