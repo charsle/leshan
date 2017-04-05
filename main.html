@@ -12,14 +12,15 @@
             padding-left: 20px;
             padding-right: 20px;
         }
-
+body{
+    height: 100vh;
+    background: #f2f2f2;
+}
         .layout-main {
             margin-top: 20px;
             display: flex;
-
             flex-wrap: wrap;
         }
-
         .layout-setting {
             width: 32%;
             margin-left: 15px;
@@ -35,13 +36,14 @@
         }
 
         .layui-tab-title .layui-this {
-           color: #fff;
+            color: #fff;
             background-color: #058de0;
-           
         }
-.layui-tab-title .layui-this:after{
- border: 0px;
-}
+
+        .layui-tab-title .layui-this:after {
+            border: 0px;
+        }
+
         .layui-tab {
             margin: 0;
         }
@@ -55,19 +57,49 @@
             line-height: 39px;
             text-align: center;
         }
+        .layout-step{
+            background: #fff;
+        }
+        .layout-step-title{
+            height: 40px;
+            line-height: 40px;
+            padding: 0 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        .layout-step-content{
+            padding: 20px;
+           
+        }
+        .layout-step-content dl{
+             text-align: center;
+            float: left;
+            cursor: pointer;
+            margin-right: 50px;
+        }
+        .layout-step-content dd{
+            margin-top: 10px;
+        }
+        .mt20{
+            margin-top: 20px;
+        }
+        .col-md-8,.col-md-4{
+            margin: 0;
+        }
+        .layui-tab-item{
+           
+            height: 80vh;
+        }
     </style>
 </head>
 
 <body>
     <div class="container-fluid">
-
         <div class="layui-tab" lay-filter="layout" lay-allowclose="true">
-            <div class="layout-logo" >
+            <div class="layout-logo">
                 logo
             </div>
             <ul class="layui-tab-title" style="float: left;width: 80%;">
                 <li class="layui-this" lay-id="11">网站设置</li>
-                
             </ul>
             <div class="layout-logo" style="float: right;">
                 个人主页
@@ -75,15 +107,46 @@
             <div class="clearfix"></div>
             <div class="layui-tab-content">
                 <div class="layui-tab-item layui-show">
-                    ddd
+                   <div class="row">
+                       <div class="col-md-8">
+                           <div class="layout-step">
+                                <div class="layout-step-title">我的应用</div>
+                                <div class="layout-step-content">
+                                   <dl data-type="tabAdd">
+                                       <dt>
+                                        <img src="https://saas.ecloud.10086.cn/File/DownLoad/Uploadify/app/20160808/92045a2af0dd4b23b8f80578c2165d6f.png" alt="">
+                                           <dd>老板签批</dd>
+                                       </dt>
+                                   </dl>
+                                   <dl data-type="tabAdd">
+                                       <dt>
+                                        <img src="https://saas.ecloud.10086.cn/File/DownLoad/Uploadify/app/20160808/4fead822f5b0493591c1b15d264b3e64.png" alt="">
+                                           <dd>工作日程</dd>
+                                       </dt>
+                                   </dl>
+                                   <div class="clearfix"></div>
+                                </div>
+                           </div>
+                            <div class="layout-step mt20">
+                               <div class="layout-step-title">签批事物</div>
+                                <div class="layout-step-content">内容</div>
+                           </div>
+                       </div>
+                       <div class="col-md-4">
+                            <div class="layout-step">
+                               <div class="layout-step-title">公告</div>
+                                <div class="layout-step-content">暂无公告</div>
+                           </div>
+                           <div class="layout-step mt20">
+                               <div class="layout-step-title">天气</div>
+                                <div class="layout-step-content">暂无公告</div>
+                           </div>
+                       </div>
+                   </div>
                 </div>
-            
             </div>
         </div>
-
     </div>
-    <!--<button class="layui-btn site-demo-active" data-type="tabAdd">新增Tab项</button>
-  <button class="layui-btn site-demo-active" data-type="tabDelete">删除：商品管理</button>-->
     </div>
 </body>
 <script src="js/jquery.min.js"></script>
@@ -92,25 +155,39 @@
     layui.use('element', function () {
         var $ = layui.jquery,
             element = layui.element(); //Tab的切换功能，切换事件监听等，需要依赖element模块
-            $('.layui-tab-title li:first-child').find('i').remove();
+        $('.layui-tab-title li:first-child').find('i').remove();
         var active = {
-            tabAdd: function () {
+            tabAdd: function (el) {
                 //新增一个Tab项
+               var title=$(el).find('dd').text();
+               var flag=active.isHasTab();
+               console.log(flag);
+                console.log(title)
+               if(flag.indexOf(title)<0){
                 element.tabAdd('layout', {
-                    title: '新选项' + (Math.random() * 1000 | 0), //用于演示
-                    content: '内容' + (Math.random() * 1000 | 0),
+                    title: title, //用于演示
+                    content: '内容'+title ,
                     id: new Date().getTime() //实际使用一般是规定好的id，这里以时间戳模拟下
                 })
+               }
+                 $('.layui-tab-title li:first-child').find('i').remove();
             },
-            tabDelete: function (othis) {
-                //删除指定Tab项
-                var layid = location.hash.replace(/^#layout=/, '');
-                element.tabDelete('layout', layid); //删除：“商品管理”
-
+            isHasTab:function(){
+                var dl_el= $('.layui-tab-title li');
+                var isflag=[];
+                for(var i=0,len=dl_el.length;i<len;i++){
+                  var title=$(dl_el[i]).text();
+                 isflag+=title;
+                }
+                return isflag;
             },
-
+            // tabDelete: function (othis) {
+            //     //删除指定Tab项
+            //     var layid = location.hash.replace(/^#layout=/, '');
+            //     element.tabDelete('layout', layid); //删除：“商品管理”
+            // },
         };
-        $('.site-demo-active').on('click', function () {
+        $('.layout-step-content dl').on('click', function () {
             var othis = $(this),
                 type = othis.data('type');
             active[type] ? active[type].call(this, othis) : '';
