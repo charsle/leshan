@@ -26,7 +26,10 @@ body{
 li {
     list-style: none;
 }
-
+.nav-menu  .btn-group{
+    width: 30px;
+    text-align: center;
+}
 .nav-menu>ul li {
     float: left;
 }
