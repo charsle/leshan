@@ -1,0 +1,93 @@
+body{
+    background: #f2f2f2;
+}
+.container-fluid {
+    padding: 0;
+}
+.mt20{
+    margin-top: 20px;
+}
+.main-nav {
+    background: #3399e5;
+    height: 60px;
+    line-height: 60px;
+}
+
+.nav-logo {
+    width: 15%;
+    color: #fff;
+}
+
+.nav-menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.nav-menu>ul li {
+    float: left;
+}
+
+.nav-menu>ul li>a {
+    display: block;
+    color: #fff;
+    padding: 0 30px;
+}
+.active{
+    background: #058de0;
+}
+a{
+    text-decoration: none!important;
+}
+.dropdown-menu .divider{
+    margin: 4px 0;
+}
+.dropdown-menu li a span{
+    margin-left: 10px;
+}
+.main-content{
+    padding: 20px;
+}
+.layout-step{
+    background: #fff;
+}
+.layout-step-title{
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    border-bottom: 1px solid #ddd;
+}
+.layout-step-content{
+    padding: 20px;
+}
+.layout-drop{
+    cursor: move;
+}
+.layout-step-close-btn{
+    background: #f2f2f2;
+}
+.thing-menu li{
+    float: left;
+    margin-left: 10px;
+}
+.thing-menu  a{
+    color: #333;
+}
+.thing-menu a:hover{
+    color: #23527c;
+}
+.thing-menu .think-active{
+    color: #23527c;
+}
+
+.layout-step-content .layout-icon{
+    float: left;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.layout-icon dd{
+    margin-top: 10px;
+}

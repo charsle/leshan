@@ -4,201 +4,175 @@
 <head>
     <meta charset="UTF-8">
     <title>主页面</title>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-    <link rel="stylesheet" href="js/layui/css/layui.css" media="all">
-
-    <style>
-        .main-header {
-            padding-left: 20px;
-            padding-right: 20px;
-        }
-body{
-    height: 100vh;
-    background: #f2f2f2;
-}
-        .layout-main {
-            margin-top: 20px;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .layout-setting {
-            width: 32%;
-            margin-left: 15px;
-        }
-
-        .layui-tab-title {
-            background-color: #3399e5;
-            height: 41px;
-        }
-
-        .layui-tab-title li {
-            color: #fff;
-        }
-
-        .layui-tab-title .layui-this {
-            color: #fff;
-            background-color: #058de0;
-        }
-
-        .layui-tab-title .layui-this:after {
-            border: 0px;
-        }
-
-        .layui-tab {
-            margin: 0;
-        }
-
-        .layout-logo {
-            float: left;
-            width: 10%;
-            height: 40px;
-            color: #fff;
-            background-color: #3399e5;
-            line-height: 39px;
-            text-align: center;
-        }
-        .layout-step{
-            background: #fff;
-        }
-        .layout-step-title{
-            height: 40px;
-            line-height: 40px;
-            padding: 0 20px;
-            border-bottom: 1px solid #ddd;
-        }
-        .layout-step-content{
-            padding: 20px;
-           
-        }
-        .layout-step-content dl{
-             text-align: center;
-            float: left;
-            cursor: pointer;
-            margin-right: 50px;
-        }
-        .layout-step-content dd{
-            margin-top: 10px;
-        }
-        .mt20{
-            margin-top: 20px;
-        }
-        .col-md-8,.col-md-4{
-            margin: 0;
-        }
-        .layui-tab-item{
-           
-            height: 80vh;
-        }
-    </style>
+    <link href="css/zui.min.css" rel="stylesheet" type="text/css" media="all"/>
+    <link rel="stylesheet" href="css/zui.dashboard.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <div class="container-fluid">
-        <div class="layui-tab" lay-filter="layout" lay-allowclose="true">
-            <div class="layout-logo">
-                logo
-            </div>
-            <ul class="layui-tab-title" style="float: left;width: 80%;">
-                <li class="layui-this" lay-id="11">网站设置</li>
+<div class="container-fluid">
+    <div class="main-nav">
+        <div class="nav-logo pull-left">
+            logo
+        </div>
+        <div class="nav-menu pull-left">
+            <ul class="pull-left">
+                <li><a href="javascript:;" class="active">工作台</a></li>
+                <li><a href="javascript:;">工作台</a></li>
             </ul>
-            <div class="layout-logo" style="float: right;">
-                个人主页
+            <div class="btn-group">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" style="color: #fff;">
+                    <i class="icon icon-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="###"><i class="icon icon-remove-sign"></i><span>关闭全部</span></a></li>
+                    <li class="divider"></li>
+                    <li><a href="###"><i class="icon"></i><span>工作台</span></a></li>
+                </ul>
             </div>
-            <div class="clearfix"></div>
-            <div class="layui-tab-content">
-                <div class="layui-tab-item layui-show">
-                   <div class="row">
-                       <div class="col-md-8">
-                           <div class="layout-step">
-                                <div class="layout-step-title">我的应用</div>
-                                <div class="layout-step-content">
-                                   <dl data-type="tabAdd">
-                                       <dt>
-                                        <img src="https://saas.ecloud.10086.cn/File/DownLoad/Uploadify/app/20160808/92045a2af0dd4b23b8f80578c2165d6f.png" alt="">
-                                           <dd>老板签批</dd>
-                                       </dt>
-                                   </dl>
-                                   <dl data-type="tabAdd">
-                                       <dt>
-                                        <img src="https://saas.ecloud.10086.cn/File/DownLoad/Uploadify/app/20160808/4fead822f5b0493591c1b15d264b3e64.png" alt="">
-                                           <dd>工作日程</dd>
-                                       </dt>
-                                   </dl>
-                                   <div class="clearfix"></div>
+
+        </div>
+        <div class="nav-info pull-right">
+
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="main-content">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="layout-step">
+                    <div class="layout-step-title">我的应用</div>
+                    <div class="layout-step-content">
+                        <dl data-type="tabAdd" class="layout-icon">
+                            <dt>
+                                <img src="https://saas.ecloud.10086.cn/File/DownLoad/Uploadify/app/20160808/92045a2af0dd4b23b8f80578c2165d6f.png"
+                                     alt="">
+                            </dt>
+                            <dd>老板签批</dd>
+                        </dl>
+                        <dl data-type="tabAdd" class="layout-icon">
+                            <dt>
+                                <img src="https://saas.ecloud.10086.cn/File/DownLoad/Uploadify/app/20160808/4fead822f5b0493591c1b15d264b3e64.png"
+                                     alt="">
+                            </dt>
+                            <dd>工作日程</dd>
+                        </dl>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="layout-step-close-btn text-center">
+                        <a href="javascript:;">
+                            <img src="images/icon_appmore.png" alt="">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="layout-step mt20 " id="sortableList">
+                    <div class="layout-step-title layout-drop">签批事物
+                        <div class="pull-right thing-menu">
+                            <ul>
+                                <li><a href="javascript:;" class="think-active">我的事物</a></li>
+                                <li><a href="javascript:;">待办事物</a></li>
+                                <li><a href="javascript:;">已办事物</a></li>
+                                <li>
+                                    <div class="dropdown">
+                                        <a href="javascript:;" data-toggle="dropdown">菜单按钮 <span
+                                                class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="###">加班申请</a></li>
+                                            <li><a href="###">请加申请</a></li>
+                                            <li><a href="###">出差申请</a></li>
+                                            <li><a href="###">报销申请</a></li>
+                                            <li><a href="###">公章使用</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="javascript:;" class="close-layout"><i class="icon icon-remove-circle"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="layout-step-content">
+                        列表
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="layout-step">
+                    <div class="layout-step-title">公告</div>
+                    <div class="layout-step-content"></div>
+                </div>
+                <div id="dashboard-layout" class="dashboard dashboard-draggable mt20" data-height="200">
+                    <section class="row">
+                        <div class="col-md-12">
+                            <div class="panel" data-id="1">
+                                <div class="panel-heading">
+                                    <div class="title">天气</div>
+                                    <div class="panel-actions">
+                                        <button type="button" class="btn remove-panel" data-toggle="tooltip" title="移除面板"><i class="icon-remove"></i></button>
+                                    </div>
                                 </div>
-                           </div>
-                            <div class="layout-step mt20">
-                               <div class="layout-step-title">签批事物</div>
-                                <div class="layout-step-content">内容</div>
-                           </div>
-                       </div>
-                       <div class="col-md-4">
-                            <div class="layout-step">
-                               <div class="layout-step-title">公告</div>
-                                <div class="layout-step-content">暂无公告</div>
-                           </div>
-                           <div class="layout-step mt20">
-                               <div class="layout-step-title">天气</div>
-                                <div class="layout-step-content">暂无公告</div>
-                           </div>
-                       </div>
-                   </div>
+                                <div class="panel-body">
+                                    内容
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="panel" data-id="2">
+                                <div class="panel-heading">
+                                    <div class="title">日程安排</div>
+                                    <div class="panel-actions">
+                                        <button type="button" class="btn remove-panel" data-toggle="tooltip" title="移除面板"><i class="icon-remove"></i></button>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                   内容
+                                </div>
+                            </div>
+                        </div>
+
+                    </section>
                 </div>
             </div>
         </div>
     </div>
-    </div>
+</div>
 </body>
 <script src="js/jquery.min.js"></script>
-<script src="js/layui/layui.js" charset="utf-8"></script>
+<script src="js/zui.min.js"></script>
+<script src="js/zui.dashboard.min.js"></script>
 <script>
-    layui.use('element', function () {
-        var $ = layui.jquery,
-            element = layui.element(); //Tab的切换功能，切换事件监听等，需要依赖element模块
-        $('.layui-tab-title li:first-child').find('i').remove();
-        var active = {
-            tabAdd: function (el) {
-                //新增一个Tab项
-               var title=$(el).find('dd').text();
-               var flag=active.isHasTab();
-               console.log(flag);
-                console.log(title)
-               if(flag.indexOf(title)<0){
-                element.tabAdd('layout', {
-                    title: title, //用于演示
-                    content: '内容'+title ,
-                    id: new Date().getTime() //实际使用一般是规定好的id，这里以时间戳模拟下
-                })
-               }
-                 $('.layui-tab-title li:first-child').find('i').remove();
-            },
-            isHasTab:function(){
-                var dl_el= $('.layui-tab-title li');
-                var isflag=[];
-                for(var i=0,len=dl_el.length;i<len;i++){
-                  var title=$(dl_el[i]).text();
-                 isflag+=title;
-                }
-                return isflag;
-            },
-            // tabDelete: function (othis) {
-            //     //删除指定Tab项
-            //     var layid = location.hash.replace(/^#layout=/, '');
-            //     element.tabDelete('layout', layid); //删除：“商品管理”
-            // },
-        };
-        $('.layout-step-content dl').on('click', function () {
-            var othis = $(this),
-                type = othis.data('type');
-            active[type] ? active[type].call(this, othis) : '';
-        });
-        //Hash地址的定位
-        var layid = location.hash.replace(/^#layout=/, '');
-        element.tabChange('layout', layid);
-        element.on('tab(layout)', function (elem) {
-            location.hash = 'layout=' + $(this).attr('lay-id');
-        });
-    });
+	$(function () {
+		$('#sortableList').droppable();
+		$('.close-layout').click(function () {
+			$(this).closest('.layout-step').hide();
+		});
+		$('#dashboard-layout').dashboard({draggable: true});
+		var arrow = 'down';
+		var arrHeight = 0;
+		var src = '';
+		$('.layout-step-close-btn a').click(function () {
+			if (arrow == 'down') {
+				arrHeight = 300;
+				arrow = 'up'
+				src = 'images/icon_appmore_close.png';
+				isArrow(this, arrHeight, src)
+			} else {
+				arrHeight = 150;
+				arrow = 'down';
+				src = 'images/icon_appmore.png';
+				isArrow(this, arrHeight, src);
+			}
+		});
+		function isArrow(_this, height, src) {
+			console.log(height);
+			$(_this).parent().siblings('.layout-step-content').animate({height: height}, 500, function () {
+				$(_this).find('img').attr('src', src)
+			}.bind(_this));
+		}
+	})
 </script>
-
 </html>
