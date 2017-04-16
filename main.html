@@ -16,7 +16,7 @@
             logo
         </div>
         <div class="nav-menu pull-left">
-            <ul class="pull-left">
+            <ul class="pull-left menu-tab">
                 <li><a href="javascript:;" class="active">工作台</a></li>
 
             </ul>
@@ -40,7 +40,7 @@
 </div>
 <div class="container-fluid">
     <div class="main-content">
-        <div class="row">
+        <div class="row content-tab">
             <div class="col-md-8">
                 <div class="layout-step">
                     <div class="layout-step-title">我的应用</div>
@@ -172,7 +172,12 @@
 			$(_this).parent().siblings('.layout-step-content').animate({height: height}, 500, function () {
 				$(_this).find('img').attr('src', src)
 			}.bind(_this));
-		}
+		};
+		$('.layout-icon').click(function () {
+          var title=$(this).find('dd').text();
+          $('.menu-tab').append('<li><a href="javascript:;" id="'+Date.now()+'">'+title+'</a></li>');
+          $('.main-content').find('.content-tab').removeClass('active-tab').hide().append('<div class="row content-tab active-tab">sssss</div>')
+		})
 	})
 </script>
 </html>

@@ -88,9 +88,11 @@ a{
 
 .layout-step-content .layout-icon{
     float: left;
-    margin-right: 30px;
+
     cursor: pointer;
+    padding: 10px 20px;
 }
 .layout-icon dd{
     margin-top: 10px;
 }
+.active-tab{display: block;}
