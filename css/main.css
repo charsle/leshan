@@ -1,12 +1,15 @@
-body{
+body {
     background: #f2f2f2;
 }
+
 .container-fluid {
     padding: 0;
 }
-.mt20{
+
+.mt20 {
     margin-top: 20px;
 }
+
 .main-nav {
     background: #3399e5;
     height: 60px;
@@ -26,73 +29,138 @@ body{
 li {
     list-style: none;
 }
-.nav-menu  .btn-group{
+
+.nav-menu .btn-group {
     width: 30px;
     text-align: center;
 }
-.nav-menu>ul li {
+
+.nav-menu > ul li {
     float: left;
 }
 
-.nav-menu>ul li>a {
+.nav-menu > ul li > a {
     display: block;
     color: #fff;
     padding: 0 30px;
 }
-.active{
+
+.active {
     background: #058de0;
 }
-a{
-    text-decoration: none!important;
+
+a {
+    text-decoration: none !important;
 }
-.dropdown-menu .divider{
+
+.dropdown-menu .divider {
     margin: 4px 0;
 }
-.dropdown-menu li a span{
+
+.dropdown-menu li a span {
     margin-left: 10px;
 }
-.main-content{
+
+.main-content {
     padding: 20px;
 }
-.layout-step{
+
+.layout-step {
     background: #fff;
 }
-.layout-step-title{
+
+.layout-step-title {
     height: 40px;
     line-height: 40px;
     padding: 0 20px;
     border-bottom: 1px solid #ddd;
 }
-.layout-step-content{
+
+.layout-step-content {
     padding: 20px;
 }
-.layout-drop{
+
+.layout-drop {
     cursor: move;
 }
-.layout-step-close-btn{
+
+.layout-step-close-btn {
     background: #f2f2f2;
 }
-.thing-menu li{
+
+.thing-menu li {
     float: left;
     margin-left: 10px;
 }
-.thing-menu  a{
+
+.thing-menu a {
     color: #333;
 }
-.thing-menu a:hover{
-    color: #23527c;
-}
-.thing-menu .think-active{
+
+.thing-menu a:hover {
     color: #23527c;
 }
 
-.layout-step-content .layout-icon{
+.thing-menu .think-active {
+    color: #23527c;
+}
+
+.layout-step-content .layout-icon {
     float: left;
 
     cursor: pointer;
     padding: 10px 20px;
 }
-.layout-icon dd{
+
+.layout-icon dd {
     margin-top: 10px;
 }
-.active-tab{display: block;}
+
+.active-tab {
+    display: block;
+}
+
+.news-items {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.news-items-title:before {
+    width: 10px;
+    height: 10px;
+    background: #3399e5;
+    content: '';
+    margin-right: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.news-items-time {
+    min-width: 100px;
+    text-align: center;
+}
+
+.news-items-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 30px;
+    flex: 1;
+}
+.weather-now{
+    display: flex;
+    justify-content: center;
+}
+.weather-now-icon{
+    padding: 20px;
+}
+.weather-forecast{
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+}
+.weather-now-info{
+    display: flex;
+    align-items: center;
+}
