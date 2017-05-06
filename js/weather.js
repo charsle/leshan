@@ -40,7 +40,7 @@
 			for ( var i = 0, len = daily.length; i < len; i++ ) {
 				rehtml += '<div class="weather-forecast-items text-center">';
 				rehtml += '	 <div class="weather-forecast-date ">' + daily[ i ].date + '</div>';
-				rehtml += '	 <div class="weather-forecast-icon"><img src="' + icon( daily[ i ].cond.code_d ).icon + '">' + daily[ i ].cond.txt_d + '</div>';
+				rehtml += '	 <div class="weather-forecast-icon"><img src="' + icon( daily[ i ].cond.code_d ).icon + ' " width="70" >' + daily[ i ].cond.txt_d + '</div>';
 				rehtml += '	 <div class="weather-forecast-du">最高温度:' + daily[ i ].tmp.max + '°C&nbsp;&nbsp;最底温度:' + daily[ i ].tmp.min + '°C</div>';
 				rehtml += '	</div>';
 			}
@@ -53,7 +53,7 @@
 				'	<p>' + now.tmp + '° C</p>',
 				'	</div>',
 				'	<div class="weather-now-icon">',
-				'	<img src="' + icon( now.cond.code ).icon + '"alt="">',
+				'	<img src="' + icon( now.cond.code ).icon + '"alt="" width="80">',
 				'		</div>',
 				'		</div>',
 				'		<div class="weather-forecast">' + rehtml + '</div>'

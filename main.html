@@ -1,216 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8">
-		<title>主页面</title>
-		<link href="css/zui.min.css" rel="stylesheet" type="text/css" media="all"/>
-		<link rel="stylesheet" href="css/zui.dashboard.css">
-		<link rel="stylesheet" href="css/zui.calendar.min.css">
-		<link rel="stylesheet" href="css/main.css">
-	</head>
+<head>
+    <meta charset="UTF-8">
+    <title>主页面</title>
+    <link href="css/zui.min.css" rel="stylesheet" type="text/css" media="all"/>
+    <link rel="stylesheet" href="css/zui.dashboard.css">
+    <link rel="stylesheet" href="css/zui.calendar.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        .menu-tab li {
+            display: flex;
+            justify-content: space-between;
+        }
 
-	<body>
-		<div class="container-fluid">
-			<div class="main-nav">
-				<div class="nav-logo pull-left">
-					logo
-				</div>
-				<div class="nav-menu pull-left">
-					<ul class="pull-left menu-tab">
-						<li><a href="javascript:;" class="active">工作台</a></li>
+        .menu-tab li span {
+            padding: 0 10px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #ccc;
+        }
+    </style>
+</head>
 
-					</ul>
-					<div class="btn-group">
-						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" style="color: #fff;">
-							<i class="icon icon-caret-down"></i>
-						</a>
-						<ul class="dropdown-menu" role="menu">
-							<li><a href="###"><i class="icon icon-remove-sign"></i><span>关闭全部</span></a></li>
-							<li class="divider"></li>
-							<li><a href="###"><i class="icon"></i><span>工作台</span></a></li>
-						</ul>
-					</div>
+<body>
+<div class="container-fluid">
+    <div class="main-nav">
+        <div class="nav-logo pull-left">
+            logo
+        </div>
+        <div class="nav-menu pull-left">
+            <ul class="pull-left menu-tab">
+                <li class="active"><a href="javascript:;" data-name="home" data-sid="sadas" data-title="工作台">工作台</a>
+                </li>
 
-				</div>
-				<div class="nav-info pull-right">
+            </ul>
+            <div class="btn-group">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" style="color: #fff;">
+                    <i class="icon icon-caret-down"></i>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="###"><i class="icon icon-remove-sign"></i><span>关闭全部</span></a></li>
+                    <li class="divider"></li>
+                    <li><a href="###"><i class="icon"></i><span>工作台</span></a></li>
+                </ul>
+            </div>
 
-				</div>
-				<div class="clearfix"></div>
-			</div>
-		</div>
-		<div class="container-fluid">
-			<div class="main-content">
-				<div class="row content-tab">
-					<div class="col-md-8">
-						<div class="layout-step">
-							<div class="layout-step-title">我的应用</div>
-							<div class="layout-step-content">
-								<dl data-type="tabAdd" class="layout-icon">
-									<dt>
-										<img src="https://saas.ecloud.10086.cn/File/DownLoad/Uploadify/app/20160808/92045a2af0dd4b23b8f80578c2165d6f.png"
-											 alt="">
-									</dt>
-									<dd>老板签批</dd>
-								</dl>
-								<dl data-type="tabAdd" class="layout-icon">
-									<dt>
-										<img src="https://saas.ecloud.10086.cn/File/DownLoad/Uploadify/app/20160808/4fead822f5b0493591c1b15d264b3e64.png"
-											 alt="">
-									</dt>
-									<dd>工作日程</dd>
-								</dl>
-								<div class="clearfix"></div>
-							</div>
-							<div class="layout-step-close-btn text-center">
-								<a href="javascript:;">
-									<img src="images/icon_appmore.png" alt="">
-								</a>
-							</div>
-						</div>
+        </div>
+        <div class="nav-info pull-right">
 
-						<div class="layout-step mt20 " id="sortableList">
-							<div class="layout-step-title layout-drop">签批事物
-								<div class="pull-right thing-menu">
-									<ul>
-										<li><a href="javascript:;" class="think-active">我的事物</a></li>
-										<li><a href="javascript:;">待办事物</a></li>
-										<li><a href="javascript:;">已办事物</a></li>
-										<li>
-											<div class="dropdown">
-												<a href="javascript:;" data-toggle="dropdown">菜单按钮 <span
-														class="caret"></span></a>
-												<ul class="dropdown-menu">
-													<li><a href="###">加班申请</a></li>
-													<li><a href="###">请加申请</a></li>
-													<li><a href="###">出差申请</a></li>
-													<li><a href="###">报销申请</a></li>
-													<li><a href="###">公章使用</a></li>
-												</ul>
-											</div>
-										</li>
-										<li><a href="javascript:;" class="close-layout"><i
-												class="icon icon-remove-circle"></i></a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="layout-step-content">
-								<div class="news-items">
-									<div class="news-items-title"><a href="javascript:;">公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用使用公章使用公章使用公章使用使用公章使用公章使用公章使用使用公章使用公章使用公章使用使用公章使用</a>
-									</div>
-									<div class="news-items-time">2017-08-08</div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="main-content">
+        <div class="row content-tab" id="content-tab-home">
+            <div class="col-md-8">
+                <div class="layout-step">
+                    <div class="layout-step-title">我的应用</div>
+                    <div class="layout-step-content">
+                        <dl data-type="tabAdd" class="layout-icon" data-sid="12212" data-name="qpapp" data-title="老板签批">
+                            <dt>
+                                <img src="https://saas.ecloud.10086.cn/File/DownLoad/Uploadify/app/20160808/92045a2af0dd4b23b8f80578c2165d6f.png"
+                                     alt="">
+                            </dt>
+                            <dd>老板签批</dd>
+                        </dl>
+                        <dl data-type="tabAdd" class="layout-icon" data-sid="1234" data-name="rcapp" data-title="工作日程">
+                            <dt>
+                                <img src="https://saas.ecloud.10086.cn/File/DownLoad/Uploadify/app/20160808/4fead822f5b0493591c1b15d264b3e64.png"
+                                     alt="">
+                            </dt>
+                            <dd>工作日程</dd>
+                        </dl>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="layout-step-close-btn text-center">
+                        <a href="javascript:;">
+                            <img src="images/icon_appmore.png" alt="">
+                        </a>
+                    </div>
+                </div>
 
-								</div>
-								<div class="news-items">
-									<div class="news-items-title"><a href="javascript:;">公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用</a>
-									</div>
-									<div class="news-items-time">2017-08-08</div>
+                <div class="layout-step mt20 " id="sortableList">
+                    <div class="layout-step-title layout-drop">签批事物
+                        <div class="pull-right thing-menu">
+                            <ul>
+                                <li><a href="javascript:;" class="think-active">我的事物</a></li>
+                                <li><a href="javascript:;">待办事物</a></li>
+                                <li><a href="javascript:;">已办事物</a></li>
+                                <li>
+                                    <div class="dropdown">
+                                        <a href="javascript:;" data-toggle="dropdown">菜单按钮 <span
+                                                class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="###">加班申请</a></li>
+                                            <li><a href="###">请加申请</a></li>
+                                            <li><a href="###">出差申请</a></li>
+                                            <li><a href="###">报销申请</a></li>
+                                            <li><a href="###">公章使用</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li><a href="javascript:;" class="close-layout"><i
+                                        class="icon icon-remove-circle"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="layout-step-content">
+                        <div class="news-items">
+                            <div class="news-items-title"><a href="javascript:;">公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用使用公章使用公章使用公章使用使用公章使用公章使用公章使用使用公章使用公章使用公章使用使用公章使用</a>
+                            </div>
+                            <div class="news-items-time">2017-08-08</div>
 
-								</div>
-							</div>
+                        </div>
+                        <div class="news-items">
+                            <div class="news-items-title"><a href="javascript:;">公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用公章使用</a>
+                            </div>
+                            <div class="news-items-time">2017-08-08</div>
 
-						</div>
-					</div>
+                        </div>
+                    </div>
 
-					<div class="col-md-4">
-						<div class="layout-step">
-							<div class="layout-step-title">公告</div>
-							<div class="layout-step-content"></div>
-						</div>
-						<div id="dashboard-layout" class="dashboard dashboard-draggable mt20">
-							<section class="row">
-								<div class="col-md-12">
-									<div class="panel" data-id="1">
-										<div class="panel-heading">
-											<div class="title">天气</div>
-											<div class="panel-actions">
-												<button type="button" class="btn remove-panel" data-toggle="tooltip"
-														title="移除面板"><i class="icon-remove"></i></button>
-											</div>
-										</div>
-										<div class="panel-body" id="weather">
+                </div>
+            </div>
 
-										</div>
-									</div>
-								</div>
-								<div class="col-md-12">
-									<div class="panel" data-id="2">
-										<div class="panel-heading">
-											<div class="title">日程安排</div>
-											<div class="panel-actions">
-												<button type="button" class="btn remove-panel" data-toggle="tooltip"
-														title="移除面板"><i class="icon-remove"></i></button>
-											</div>
-										</div>
-										<div class="panel-body">
-											内容
-										</div>
-									</div>
-								</div>
+            <div class="col-md-4">
+                <div class="layout-step">
+                    <div class="layout-step-title">公告</div>
+                    <div class="layout-step-content"></div>
+                </div>
+                <div id="dashboard-layout" class="dashboard dashboard-draggable mt20">
+                    <section class="row">
+                        <div class="col-md-12">
+                            <div class="panel" data-id="1">
+                                <div class="panel-heading">
+                                    <div class="title">天气</div>
+                                    <div class="panel-actions">
+                                        <button type="button" class="btn remove-panel" data-toggle="tooltip"
+                                                title="移除面板"><i class="icon-remove"></i></button>
+                                    </div>
+                                </div>
+                                <div class="panel-body" id="weather">
 
-								<div class="col-md-12">
-									<div class="panel" data-id="3">
-										<div class="panel-heading">
-											<div class="title">日历</div>
-											<div class="panel-actions">
-												<button type="button" class="btn remove-panel" data-toggle="tooltip"
-														title="移除面板"><i class="icon-remove"></i></button>
-											</div>
-										</div>
-										<div class="panel-body">
-											<div id="calendar" class="calendar"></div>
-										</div>
-									</div>
-								</div>
-							</section>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</body>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/zui.min.js"></script>
-	<script src="js/zui.dashboard.min.js"></script>
-	<script src="js/zui.calendar.min.js"></script>
-	<script src="js/icon.js"></script>
-	<script src="js/weather.js"></script>
-	<script>
-		$( function () {
-			$( '#sortableList' ).droppable();
-			$( '.close-layout' ).click( function () {
-				$( this ).closest( '.layout-step' ).hide();
-			} );
-			$( '#calendar' ).calendar();
-			$( '#dashboard-layout' ).dashboard( { draggable: true } );
-			var arrow = 'down';
-			var arrHeight = 0;
-			var src = '';
-			$( '.layout-step-close-btn a' ).click( function () {
-				if ( arrow === 'down' ) {
-					arrHeight = 300;
-					arrow = 'up';
-					src = 'images/icon_appmore_close.png';
-					isArrow( this, arrHeight, src )
-				} else {
-					arrHeight = 160;
-					arrow = 'down';
-					src = 'images/icon_appmore.png';
-					isArrow( this, arrHeight, src );
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="panel" data-id="2">
+                                <div class="panel-heading">
+                                    <div class="title">日程安排</div>
+                                    <div class="panel-actions">
+                                        <button type="button" class="btn remove-panel" data-toggle="tooltip"
+                                                title="移除面板"><i class="icon-remove"></i></button>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    内容
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="panel" data-id="3">
+                                <div class="panel-heading">
+                                    <div class="title">日历</div>
+                                    <div class="panel-actions">
+                                        <button type="button" class="btn remove-panel" data-toggle="tooltip"
+                                                title="移除面板"><i class="icon-remove"></i></button>
+                                    </div>
+                                </div>
+                                <div class="panel-body">
+                                    <div id="calendar" class="calendar"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/zui.min.js"></script>
+<script src="js/zui.dashboard.min.js"></script>
+<script src="js/zui.calendar.min.js"></script>
+<script src="js/icon.js"></script>
+<script src="js/weather.js"></script>
+<script>
+	$(function () {
+		$('#sortableList').droppable();
+		$('.close-layout').click(function () {
+			$(this).closest('.layout-step').hide();
+		});
+		$('#calendar').calendar();
+		$('#dashboard-layout').dashboard({draggable: true});
+		var arrow = 'down';
+		var arrHeight = 0;
+		var src = '';
+		$('.layout-step-close-btn a').click(function () {
+			if (arrow === 'down') {
+				arrHeight = 300;
+				arrow = 'up';
+				src = 'images/icon_appmore_close.png';
+				isArrow(this, arrHeight, src)
+			} else {
+				arrHeight = 160;
+				arrow = 'down';
+				src = 'images/icon_appmore.png';
+				isArrow(this, arrHeight, src);
+			}
+		});
+		function isArrow(_this, height, src) {
+			console.log(height);
+			$(_this).parent().siblings('.layout-step-content').animate({height: height}, 500, function () {
+				$(_this).find('img').attr('src', src)
+			}.bind(_this));
+		};
+		//已打开应用列表
+		var _currid = 0; //当前显示的tab id
+		var _tabs = ['home']; //已经打开的tab 对象[{...},{...}]
+		var _tabids = []; //已经打开的tab 对象ID
+		$('.layout-icon').click(function () {
+			var sid = $(this).data('sid'),
+				name = $(this).data('name'),
+				title = $(this).data('title');
+			if (_tabs.indexOf(name) < 0) {
+				_tabs.push(name);
+				createTab(name, sid, title);
+			}
+
+			console.log(_tabs);
+
+
+		})
+		$('.menu-tab').delegate('a', 'click', function () {
+			$('.content-tab').hide();
+			var name=$(this).data('name');
+			$('#content-tab-' + name).show();
+			$('.menu-tab li').removeClass('active');
+			$(this).parent('li').addClass('active');
+			if(name!=='home'){
+				$('html').css({overflow:'hidden'})
+			}else{
+				$('html').css({overflow:'auto'})
+			}
+		}).delegate('span', 'click', function () {
+			var name = $(this).data('name');
+			$(this).parent('li').remove();
+			deleteTab(name)
+		})
+
+
+		//tab模版
+		var templateTab = function (name, id, title) {
+			return {
+				//tab
+				tabTitle0: '<li class="active"><a href="javascript:;"  data-sid="' + id + '" data-name="' + name + '">' + title + '</a><span data-name="' + name + '">x</span></li>',
+				tabContent1: '<div class="row content-tab active-tab" id="content-tab-' + name + '">' +
+				'<iframe class="pageCon" id="appIframe' + id + '" src="index.html" style="height: 500px;width: 100%" scrolling="auto"  frameborder="0" ></iframe>' +
+				'</div>',
+			}
+		}
+		//创建tab
+		var createTab = function (name, sid, title) {
+			$('.menu-tab li').removeClass('active');
+			$('.menu-tab').append(templateTab(name, sid, title).tabTitle0);
+			$('.content-tab').hide();
+			$('.main-content').append(templateTab(name, sid, title).tabContent1).show();
+			location.hash = '#open=' + name + '&id=' + sid;
+			if(name!=='home'){
+				$('html').css({overflow:'hidden'})
+            }else{
+				$('html').css({overflow:'auto'})
+            }
+		}
+		//删除Tab
+		var deleteTab = function (name) {
+			$('#content-tab-' +name).remove();
+			for(var i=0; i<_tabs.length; i++) {
+				if(_tabs[i] == name) {
+					_tabs.splice(i, 1);
+					break;
 				}
-			} );
-			function isArrow( _this, height, src ) {
-				console.log( height );
-				$( _this ).parent().siblings( '.layout-step-content' ).animate( { height: height }, 500, function () {
-					$( _this ).find( 'img' ).attr( 'src', src )
-				}.bind( _this ) );
-			};
-			$( '.layout-icon' ).click( function () {
-				var title = $( this ).find( 'dd' ).text();
-				$( '.menu-tab' ).append( '<li><a href="javascript:;" id="' + Date.now() + '">' + title + '</a></li>' );
-				$( '.main-content' ).find( '.content-tab' ).removeClass( 'active-tab' ).hide().append( '<div class="row content-tab active-tab">sssss</div>' )
-			} )
-		} )
-	</script>
+			}
+			var back=_tabs[_tabs.length-1];
+			$('.content-tab').hide();
+			$('a[data-name="'+back+'"]').parent('li').addClass('active');
+			$('#content-tab-' +back).show();
+		}
+
+
+	})
+</script>
 </html>
