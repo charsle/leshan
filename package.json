@@ -1,0 +1,19 @@
+{
+  "name": "leshan",
+  "version": "1.0.0",
+  "description": "乐山项目",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charsle/leshan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charsle/leshan/issues"
+  },
+  "homepage": "https://github.com/charsle/leshan#readme"
+}

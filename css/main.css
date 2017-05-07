@@ -45,7 +45,7 @@ li {
     padding: 0 30px;
 }
 
-.active {
+.menu-tab .active {
     background: #058de0;
 }
 
