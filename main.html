@@ -29,6 +29,50 @@
         }
         .count-bar .tab-pane{padding: 15px;}
         .count-bar .tab-pane>div{height: 350px}
+        .teacher-info dd{
+            padding: 15px;
+            border-bottom: 1px solid #f2f2f2;
+        }
+        .teacher-info dd i{
+            margin-right: 15px;
+        }
+        .teacher-info dd:last-of-type{
+            border-bottom: 0px solid #f2f2f2;
+            padding-bottom: 0;
+        }
+        .teacher-info dt{
+            padding: 10px;
+            text-align: center;
+            background:#32adff;
+            border-radius: 5px;
+        }
+        .teacher-info dt img{
+            width: 100px;
+            height: 100px;
+            border:1px solid #fff;
+            background: #fff;
+            border-radius: 50%;
+        }
+        .teacher-layout .layout-step-content{
+            padding-top: 0;
+            padding-bottom: 5px;
+        }
+        .notice-list p{
+            width: 90%;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            border-bottom: 1px dashed #ccc;
+            height: 30px;
+        }
+        .email-step{
+            display: flex;
+            justify-content: space-between;
+        }
+        .email-step a{
+            color: #f00;
+            padding: 0 5px;
+        }
     </style>
 </head>
 
@@ -207,9 +251,40 @@
             </div>
 
             <div class="col-md-4">
-                <div class="layout-step">
-                    <div class="layout-step-title">公告</div>
-                    <div class="layout-step-content"></div>
+                <div class="layout-step teacher-layout">
+                    <div class="layout-step-title">教师信息</div>
+                    <div class="layout-step-content">
+                        <dl class="teacher-info">
+                            <dt><img src="./images/ba2.png" alt=""></dt>
+                            <dd><i class="icon icon-user"></i>姓&nbsp;&nbsp;名：小莫</dd>
+                            <dd><i class="icon icon-credit"></i>职工号：SB0001</dd>
+                            <dd><i class="icon icon-trophy"></i>职&nbsp;&nbsp;称：班主任</dd>
+                            <dd><i class="icon icon-group"></i>所在部门：数学管理系</dd>
+                            <dd><i class="icon icon-phone-sign"></i>联系电话：187234345</dd>
+                            <dd class="text-right"><a href="javascript:;" class="btn btn-primary">详细信息</a></dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="layout-step mt20">
+                    <div class="layout-step-title">公告 <div class="pull-right"><a href="notice.html" target="_blank">更多</a></div></div>
+                    <div class="layout-step-content">
+                        <div class="notice-list">
+                            <p><i class="icon icon-bullhorn"></i>&nbsp;&nbsp;<a href="javascript:;">撒大声了点ask 大家索朗多吉阿里斯顿就啊三等奖了就啊距离圣诞节撒的</a></p>
+                            <p><i class="icon icon-bullhorn"></i>&nbsp;&nbsp;<a href="javascript:;">撒大声了点ask 大家索朗多吉阿里斯顿就啊三等奖了就啊距离圣诞节撒的</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="layout-step mt20 teacher-layout">
+                    <div class="layout-step-title">我的邮件</div>
+                    <div class="layout-step-content">
+                        <dl class="teacher-info">
+                            <dd class="email-step"><span>未读邮件:<a href="javascript:;">3</a>封</span><span>已读邮件:<a href="javascript:;">3</a>封</span></dd>
+                            <dd class="email-step"><span>总邮件:<a href="javascript:;">3</a>封</span><span>已发邮件:<a href="javascript:;">3</a>封</span></dd>
+                            <dd class="email-step"><span>已成功发送手机短信:<a href="javascript:;">3</a>条</span></dd>
+                            <dd class="email-step"><span>未成功发送手机短信:<a href="javascript:;">3</a>条</span></dd>
+                            <dd class="text-right"><a href="javascript:;" class="btn btn-primary">进入邮箱</a></dd>
+                        </dl>
+                    </div>
                 </div>
                 <div id="dashboard-layout" class="dashboard dashboard-draggable mt20">
                     <section class="row">

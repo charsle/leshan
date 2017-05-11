@@ -72,7 +72,7 @@ var Pie = (function () {
 
 	/**
 	 * 收费情况统计
-	 * * @param id document element
+	 * * @param id document element·
 	 */
 	function getMoneyCount(id) {
 		var myChart = echarts.init(document.getElementById(id));
