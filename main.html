@@ -8,72 +8,7 @@
     <link rel="stylesheet" href="css/zui.dashboard.css">
     <link rel="stylesheet" href="css/zui.calendar.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <style>
-        .menu-tab li {
-            display: flex;
-            justify-content: space-between;
-        }
 
-        .menu-tab li span {
-            padding: 0 10px;
-            cursor: pointer;
-            font-size: 16px;
-            color: #ccc;
-        }
-        .course-table tr td{
-                text-align: center;
-
-        }
-        .course-time{
-            border-top: 1px dashed #999999;
-        }
-        .count-bar .tab-pane{padding: 15px;}
-        .count-bar .tab-pane>div{height: 350px}
-        .teacher-info dd{
-            padding: 15px;
-            border-bottom: 1px solid #f2f2f2;
-        }
-        .teacher-info dd i{
-            margin-right: 15px;
-        }
-        .teacher-info dd:last-of-type{
-            border-bottom: 0px solid #f2f2f2;
-            padding-bottom: 0;
-        }
-        .teacher-info dt{
-            padding: 10px;
-            text-align: center;
-            background:#32adff;
-            border-radius: 5px;
-        }
-        .teacher-info dt img{
-            width: 100px;
-            height: 100px;
-            border:1px solid #fff;
-            background: #fff;
-            border-radius: 50%;
-        }
-        .teacher-layout .layout-step-content{
-            padding-top: 0;
-            padding-bottom: 5px;
-        }
-        .notice-list p{
-            width: 90%;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
-            border-bottom: 1px dashed #ccc;
-            height: 30px;
-        }
-        .email-step{
-            display: flex;
-            justify-content: space-between;
-        }
-        .email-step a{
-            color: #f00;
-            padding: 0 5px;
-        }
-    </style>
 </head>
 
 <body>
@@ -111,7 +46,7 @@
         <div class="row content-tab" id="content-tab-home">
             <div class="col-md-8">
                 <div class="layout-step">
-                    <div class="layout-step-title">我的应用</div>
+                    <div class="layout-step-title"><i class="icon icon-th-large"></i>&nbsp;&nbsp;我的应用</div>
                     <div class="layout-step-content">
                         <dl data-type="tabAdd" class="layout-icon" data-sid="12212" data-name="qpapp" data-title="老板签批">
                             <dt>
@@ -137,7 +72,7 @@
                 </div>
 
                 <div class="layout-step mt20 " id="sortableList">
-                    <div class="layout-step-title layout-drop">签批事物
+                    <div class="layout-step-title layout-drop"><i class="icon icon-paint-brush"></i>&nbsp;&nbsp;签批事物
                         <div class="pull-right thing-menu">
                             <ul>
                                 <li><a href="javascript:;" class="think-active">我的事物</a></li>
@@ -182,7 +117,7 @@
                 </div>
 
                 <div class="layout-step mt20">
-                    <div class="layout-step-title">综合课表</div>
+                    <div class="layout-step-title"><i class="icon icon-list-alt"></i>&nbsp;&nbsp;综合课表</div>
                     <div class="layout-step-content">
                         <table class="table table-bordered course-table">
                             <tr>
@@ -215,7 +150,7 @@
 
 
                 <div class="layout-step mt20">
-                    <div class="layout-step-title">综合统计</div>
+                    <div class="layout-step-title"><i class="icon icon-pie-chart"></i>&nbsp;&nbsp;综合统计</div>
                     <div class="layout-step-content">
                         <ul class="nav nav-tabs">
                             <li class="active"><a data-tab href="#tabContent1">在线人数统计</a></li>
@@ -240,7 +175,7 @@
                 </div>
 
                 <div class="layout-step mt20">
-                    <div class="layout-step-title">收费统计</div>
+                    <div class="layout-step-title"><i class="icon icon-line-chart"></i>&nbsp;&nbsp;收费统计</div>
                     <div class="layout-step-content">
                         <div id="getMoneyCount" style="height: 350px;"></div>
                     </div>
@@ -252,7 +187,7 @@
 
             <div class="col-md-4">
                 <div class="layout-step teacher-layout">
-                    <div class="layout-step-title">教师信息</div>
+                    <div class="layout-step-title"><i class="icon icon-bookmark"></i>&nbsp;&nbsp;教师信息</div>
                     <div class="layout-step-content">
                         <dl class="teacher-info">
                             <dt><img src="./images/ba2.png" alt=""></dt>
@@ -266,7 +201,7 @@
                     </div>
                 </div>
                 <div class="layout-step mt20">
-                    <div class="layout-step-title">公告 <div class="pull-right"><a href="notice.html" target="_blank">更多</a></div></div>
+                    <div class="layout-step-title"><i class="icon icon-file-audio"></i>&nbsp;&nbsp;公告 <div class="pull-right"><a href="notice.html" target="_blank">更多</a></div></div>
                     <div class="layout-step-content">
                         <div class="notice-list">
                             <p><i class="icon icon-bullhorn"></i>&nbsp;&nbsp;<a href="javascript:;">撒大声了点ask 大家索朗多吉阿里斯顿就啊三等奖了就啊距离圣诞节撒的</a></p>
@@ -275,7 +210,7 @@
                     </div>
                 </div>
                 <div class="layout-step mt20 teacher-layout">
-                    <div class="layout-step-title">我的邮件</div>
+                    <div class="layout-step-title"><i class="icon icon-envelope-alt"></i>&nbsp;&nbsp;我的邮件</div>
                     <div class="layout-step-content">
                         <dl class="teacher-info">
                             <dd class="email-step"><span>未读邮件:<a href="javascript:;">3</a>封</span><span>已读邮件:<a href="javascript:;">3</a>封</span></dd>
@@ -291,7 +226,7 @@
                         <div class="col-md-12">
                             <div class="panel" data-id="1">
                                 <div class="panel-heading">
-                                    <div class="title">天气</div>
+                                    <div class="title"><i class="icon icon-cloud"></i>&nbsp;&nbsp;天气</div>
                                     <div class="panel-actions">
                                         <button type="button" class="btn remove-panel" data-toggle="tooltip"
                                                 title="移除面板"><i class="icon-remove"></i></button>
@@ -305,7 +240,7 @@
                         <div class="col-md-12">
                             <div class="panel" data-id="2">
                                 <div class="panel-heading">
-                                    <div class="title">日程安排</div>
+                                    <div class="title"><i class="icon icon-line-chart"></i>&nbsp;&nbsp;日程安排</div>
                                     <div class="panel-actions">
                                         <button type="button" class="btn remove-panel" data-toggle="tooltip"
                                                 title="移除面板"><i class="icon-remove"></i></button>
@@ -320,7 +255,7 @@
                         <div class="col-md-12">
                             <div class="panel" data-id="3">
                                 <div class="panel-heading">
-                                    <div class="title">日历</div>
+                                    <div class="title"><i class="icon icon-calendar"></i>&nbsp;&nbsp;日历</div>
                                     <div class="panel-actions">
                                         <button type="button" class="btn remove-panel" data-toggle="tooltip"
                                                 title="移除面板"><i class="icon-remove"></i></button>
