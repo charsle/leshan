@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="./css/zui.min.css">
+    <link rel="stylesheet" href="./css/simplePagination.css">
     <link rel="stylesheet" href="css/main.css">
     <style>
         .notice-content .breadcrumb {
@@ -67,7 +68,26 @@
             </div>
         </div>
     </div>
+    <div id="pages"></div>
 </div>
 </div>
 </body>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/jquery.simplePagination.js"></script>
+<script>
+$(function (  ) {
+	$("#pages").pagination({
+		items: 200, //总的条数:int类型
+		currentPage: 4, //页数
+		itemsOnPage: 10, //每页显示几条
+		cssStyle: 'light-theme',
+		selectOnClick: true,
+		hrefTextPrefix: '',
+		onPageClick: function() {
+
+		}
+	});
+})
+
+</script>
 </html>
