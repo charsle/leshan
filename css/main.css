@@ -107,13 +107,16 @@ a {
 
 .layout-step-content .layout-icon {
     float: left;
-
+    text-align: center;
     cursor: pointer;
     padding: 10px 20px;
 }
-
 .layout-icon dd {
     margin-top: 10px;
+}
+.app-layout{
+    height: 140px;
+    overflow: hidden;
 }
 
 .active-tab {

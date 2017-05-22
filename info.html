@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./css/zui.min.css" rel="stylesheet" type="text/css" media="all" />
+    <title>个人信息</title>
+    <style>
+    .layout-content-info{
+        height: 80vh;
+        overflow: auto;
+    }
+    </style>
+</head>
+
+<body>
+
+    <div class="user-info-warpper">
+        <div class="container">
+            <div style="height: 40px;line-height: 40px;font-size: 18px;margin-top: 20px;">
+                用户信息
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-3">
+                    <div>
+                        <div class="card">
+                            <img src="http://zui.sexy/docs/img/img2.jpg" alt="圆形图片">
+                            <div class="card-heading"><strong>学校管理员</strong></div>
+                            <div class="card-content text-muted">良辰美景奈何天，赏心乐事谁家院。</div>
+                        </div>
+
+                    </div>
+                    <div class="list-group">
+                        <a href="#info" class="list-group-item active">详细信息</a>
+                        <a href="#pwd" class="list-group-item">密码</a>
+                        <a href="#org" class="list-group-item">组织</a>
+                        <a href="#group" class="list-group-item">用户组</a>
+                        <a href="#js" class="list-group-item">角色</a>
+                        <a href="#address" class="list-group-item">地址</a>
+                        <a href="#tel" class="list-group-item">电话号码</a>
+                        <a href="#display" class="list-group-item">显示设置</a>
+                    </div>
+                </div>
+                <div class="col-md-9 layout-content-info">
+                    <div class="panel" id="info">
+                        <div class="panel-heading">
+                            详细信息
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-md-8">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="exampleInputAccount4" class="col-sm-2">UUID:</label>
+                                        <div class="col-md-10">
+                                            <p class="form-control-static">sssdee0001</p>
+                                            <!--<input type="text" class="form-control" id="exampleInputAccount4" placeholder="电子邮件/手机号/用户名">-->
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword4" class="col-sm-2">姓名:</label>
+                                        <div class="col-md-10 col-sm-10">
+                                            <p class="form-control-static">张三丰</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword4" class="col-sm-2">身份证号码:</label>
+                                        <div class="col-md-10 col-sm-10">
+                                            <p class="form-control-static">5002145198709098756</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="exampleInputAccount5" class="col-sm-2">电子邮件:</label>
+                                        <div class="col-md-10 col-sm-10">
+                                            <input type="text" class="form-control" id="exampleInputAccount5" placeholder="电子邮件">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="exampleInputAccount6" class="col-sm-2">用户ID:</label>
+                                        <div class="col-md-10 col-sm-10">
+                                            <p class="form-control-static">123432121</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputAccount7" class="col-sm-2">身份类别:</label>
+                                        <div class="col-md-10 col-sm-10">
+                                            <p class="form-control-static">管理员</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputAccount8" class="col-sm-2">性别:</label>
+                                        <div class="col-md-10 col-sm-10">
+                                            <p class="form-control-static">男</p>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-10">
+                                            <button type="submit" class="btn btn-default">保存</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card">
+                                    <img src="http://zui.sexy/docs/img/img2.jpg" alt="圆形图片" style="max-width:50%">
+                                    <div class="card-heading"><strong>学校管理员</strong></div>
+                                    <div class="card-actions">
+                                        <button type="button" class="btn btn-primary"><i class="icon icon-pencil"></i>更改</button>
+                                        <button type="button" class="btn btn-danger"><i class="icon icon-minus-sign"></i> 删除</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel" id="pwd">
+                        <div class="panel-heading">
+                            用户密码
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-md-8">
+                                <form class="form-horizontal">
+                                    <div class="form-group">
+                                        <label for="exampleInputAccount4" class="col-sm-3">请输入旧密码</label>
+                                        <div class="col-md-6 col-sm-10">
+                                            <input type="password" class="form-control" id="exampleInputAccount4" placeholder="电子邮件/手机号/用户名">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword4" class="col-sm-3">请输入新密码</label>
+                                        <div class="col-md-6 col-sm-10">
+                                            <input type="password" class="form-control" id="exampleInputPassword4" placeholder="密码">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword4" class="col-sm-3">请输入确认密码</label>
+                                        <div class="col-md-6 col-sm-10">
+                                            <input type="password" class="form-control" id="exampleInputPassword4" placeholder="密码">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-3 col-sm-10">
+                                            <button type="submit" class="btn btn-default">保存</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="panel" id="org">
+                        <div class="panel-heading">
+                            组织
+                        </div>
+                        <div class="panel-body" id="group">
+                            组织
+                        </div>
+                    </div>
+                    <div class="panel" id="js">
+                        <div class="panel-heading">
+                            用户组
+                        </div>
+                        <div class="panel-body" id="address">
+                            用户组
+                        </div>
+                    </div>
+                    <div class="panel" id="tel">
+                        <div class="panel-heading">
+                            角色
+                        </div>
+                        <div class="panel-body" id="display">
+                            角色
+                        </div>
+                    </div>
+
+
+
+                    <div class="panel">
+                        <div class="panel-heading">
+                            地址
+                        </div>
+                        <div class="panel-body">
+                            地址
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-heading">
+                            电话号码
+                        </div>
+                        <div class="panel-body">
+                            电话号码
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-heading">
+                            地址
+                        </div>
+                        <div class="panel-body">
+                            地址
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-heading">
+                            显示设置
+                        </div>
+                        <div class="panel-body">
+                            显示设置
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/zui.min.js"></script>
+    <script>
+        $(function () {
+            $('.list-group').on('click', 'a', function () {
+                var $this = $(this);
+                $('.list-group a').removeClass('active');
+                $this.addClass('active');
+            });
+        })
+    </script>
+</body>
+
+</html>

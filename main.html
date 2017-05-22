@@ -47,13 +47,83 @@
             <div class="col-md-8">
                 <div class="layout-step">
                     <div class="layout-step-title"><i class="icon icon-th-large"></i>&nbsp;&nbsp;我的应用</div>
-                    <div class="layout-step-content">
+                    <div class="layout-step-content app-layout">
                         <dl data-type="tabAdd" class="layout-icon" data-sid="12212" data-name="qpapp" data-title="老板签批">
                             <dt>
                                 <img src="https://saas.ecloud.10086.cn/File/DownLoad/Uploadify/app/20160808/92045a2af0dd4b23b8f80578c2165d6f.png"
                                      alt="">
                             </dt>
-                            <dd>老板签批</dd>
+                            <dd>老板签批老板签批</dd>
+                        </dl>
+                        <dl data-type="tabAdd" class="layout-icon" data-sid="1234" data-name="rcapp" data-title="工作日程">
+                            <dt>
+                                <img src="https://saas.ecloud.10086.cn/File/DownLoad/Uploadify/app/20160808/4fead822f5b0493591c1b15d264b3e64.png"
+                                     alt="">
+                            </dt>
+                            <dd>工作日程</dd>
+                        </dl>
+                        <dl data-type="tabAdd" class="layout-icon" data-sid="12212" data-name="qpapp" data-title="老板签批">
+                            <dt>
+                                <img src="https://saas.ecloud.10086.cn/File/DownLoad/Uploadify/app/20160808/92045a2af0dd4b23b8f80578c2165d6f.png"
+                                     alt="">
+                            </dt>
+                            <dd>老板签批老板签批</dd>
+                        </dl>
+                        <dl data-type="tabAdd" class="layout-icon" data-sid="1234" data-name="rcapp" data-title="工作日程">
+                            <dt>
+                                <img src="https://saas.ecloud.10086.cn/File/DownLoad/Uploadify/app/20160808/4fead822f5b0493591c1b15d264b3e64.png"
+                                     alt="">
+                            </dt>
+                            <dd>工作日程</dd>
+                        </dl>
+                        <dl data-type="tabAdd" class="layout-icon" data-sid="12212" data-name="qpapp" data-title="老板签批">
+                            <dt>
+                                <img src="https://saas.ecloud.10086.cn/File/DownLoad/Uploadify/app/20160808/92045a2af0dd4b23b8f80578c2165d6f.png"
+                                     alt="">
+                            </dt>
+                            <dd>老板签批老板签批</dd>
+                        </dl>
+                        <dl data-type="tabAdd" class="layout-icon" data-sid="1234" data-name="rcapp" data-title="工作日程">
+                            <dt>
+                                <img src="https://saas.ecloud.10086.cn/File/DownLoad/Uploadify/app/20160808/4fead822f5b0493591c1b15d264b3e64.png"
+                                     alt="">
+                            </dt>
+                            <dd>工作日程</dd>
+                        </dl>
+                        <dl data-type="tabAdd" class="layout-icon" data-sid="12212" data-name="qpapp" data-title="老板签批">
+                            <dt>
+                                <img src="https://saas.ecloud.10086.cn/File/DownLoad/Uploadify/app/20160808/92045a2af0dd4b23b8f80578c2165d6f.png"
+                                     alt="">
+                            </dt>
+                            <dd>老板签批老板签批</dd>
+                        </dl>
+                        <dl data-type="tabAdd" class="layout-icon" data-sid="1234" data-name="rcapp" data-title="工作日程">
+                            <dt>
+                                <img src="https://saas.ecloud.10086.cn/File/DownLoad/Uploadify/app/20160808/4fead822f5b0493591c1b15d264b3e64.png"
+                                     alt="">
+                            </dt>
+                            <dd>工作日程</dd>
+                        </dl>
+                        <dl data-type="tabAdd" class="layout-icon" data-sid="12212" data-name="qpapp" data-title="老板签批">
+                            <dt>
+                                <img src="https://saas.ecloud.10086.cn/File/DownLoad/Uploadify/app/20160808/92045a2af0dd4b23b8f80578c2165d6f.png"
+                                     alt="">
+                            </dt>
+                            <dd>老板签批老板签批</dd>
+                        </dl>
+                        <dl data-type="tabAdd" class="layout-icon" data-sid="1234" data-name="rcapp" data-title="工作日程">
+                            <dt>
+                                <img src="https://saas.ecloud.10086.cn/File/DownLoad/Uploadify/app/20160808/4fead822f5b0493591c1b15d264b3e64.png"
+                                     alt="">
+                            </dt>
+                            <dd>工作日程</dd>
+                        </dl>
+                        <dl data-type="tabAdd" class="layout-icon" data-sid="12212" data-name="qpapp" data-title="老板签批">
+                            <dt>
+                                <img src="https://saas.ecloud.10086.cn/File/DownLoad/Uploadify/app/20160808/92045a2af0dd4b23b8f80578c2165d6f.png"
+                                     alt="">
+                            </dt>
+                            <dd>老板签批老板签批</dd>
                         </dl>
                         <dl data-type="tabAdd" class="layout-icon" data-sid="1234" data-name="rcapp" data-title="工作日程">
                             <dt>
@@ -342,8 +412,9 @@
 			}
 		}).delegate('span', 'click', function () {
 			var name = $(this).data('name');
+            var sid = $(this).data('sid');
 			$(this).parent('li').remove();
-			deleteTab(name)
+			deleteTab(name,sid)
 		})
 
 
@@ -351,7 +422,7 @@
 		var templateTab = function (name, id, title) {
 			return {
 				//tab
-				tabTitle0: '<li class="active"><a href="javascript:;"  data-sid="' + id + '" data-name="' + name + '">' + title + '</a><span data-name="' + name + '">x</span></li>',
+				tabTitle0: '<li class="active"><a href="javascript:;"  data-sid="' + id + '" data-name="' + name + '">' + title + '</a><span data-name="' + name + '" data-sid="' + id + '" >x</span></li>',
 				tabContent1: '<div class="row content-tab active-tab" id="content-tab-' + name + '">' +
 				'<iframe class="pageCon" id="appIframe' + id + '" src="index.html" style="height: 500px;width: 100%" scrolling="auto"  frameborder="0" ></iframe>' +
 				'</div>',
@@ -371,7 +442,7 @@
             }
 		}
 		//删除Tab
-		var deleteTab = function (name) {
+		var deleteTab = function (name,sid) {
 			$('#content-tab-' +name).remove();
 			for(var i=0; i<_tabs.length; i++) {
 				if(_tabs[i] == name) {
@@ -383,6 +454,14 @@
 			$('.content-tab').hide();
 			$('a[data-name="'+back+'"]').parent('li').addClass('active');
 			$('#content-tab-' +back).show();
+            
+            location.hash = '#open=' + back + '&id=' + sid;
+            console.log(back);
+			if(back!=='home'){
+				$('html').css({overflow:'hidden'})
+            }else{
+				$('html').css({overflow:'auto'})
+            }
 		}
 
 		/**
